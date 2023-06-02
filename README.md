@@ -95,7 +95,7 @@ In this assignment, you will create a new blog application using Express.js, Mon
 12. **Create a controller:**
 
 - Create a new file called `blogController.js` in the controller's directory.
-- Open `controllers/blogController.js` and add the following functions:
+- Open `controllers/blogController.js` and add the following functions (You should create one function at a time with a route to test):
   - `getAllBlogs`, this function should return all blogs.
   - `createBlog`, this function should create a new blog.
   - `getBlogById`, this function returns one blog by id. If blog is not found, respond with a 400 and a message.
