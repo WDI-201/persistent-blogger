@@ -98,9 +98,9 @@ In this assignment, you will create a new blog application using Express.js, Mon
 - Open `controllers/blogController.js` and add the following functions:
   - `getAllBlogs`, this function should return all blogs.
   - `createBlog`, this function should create a new blog.
-  - `getBlogById`, this function returns one blog by id.
-  - `updateBlogById`, this function updates a blog by id.
-  - `deleteBlogById`, this function should delete one blog.
+  - `getBlogById`, this function returns one blog by id. If blog is not found, respond with a 400 and a message.
+  - `updateBlogById`, this function updates a blog by id. If blog is not found, respond with a 400 and a message.
+  - `deleteBlogById`, this function should delete one blog. If blog is not found, respond with a 400 and a message.
 - Remember to export these functions out so they can be used!
 
 13. **Create Routes:**
