@@ -48,13 +48,7 @@ In this assignment, you will create a new blog application using Express.js, Mon
 
 5. **Update package.json:**
    - Open the `package.json` file in the project's root directory.
-   - Locate the `"scripts"` section and update it as follows:
-     ```
-     "scripts": {
-       "start": "nodemon ./bin/www",
-     },
-     ```
-   - Save the file.
+   - Locate the `"scripts"` section and update it with nodemon
    - Run the following command in the terminal to start the server:
      ```
      npm start
@@ -72,7 +66,7 @@ In this assignment, you will create a new blog application using Express.js, Mon
 
 8. **Run the function that connects our Application to MongoDB:**
 
-   - Remember to go into `app.js` bring in the function from `db.js` below `require("dotenv").config();`
+   - Remember to go into `app.js` bring in the function that connects to mongodb from `db.js` below `require("dotenv").config();`
    - Invoke the function
 
 9. **Create router files and bring them in app.js:**
@@ -80,7 +74,7 @@ In this assignment, you will create a new blog application using Express.js, Mon
    - Create a new file called `authors.js` in the routes directory.
    - Create a new file called `blogs.js` in the routes directory.
    - Add router boilerplate to each one of the file.
-   - Remember to export router out
+   - Remember to export router out.
    - In `app.js` create a route for `/authors` and route for `/blogs`.
    - Remember location matters!
 
@@ -102,11 +96,11 @@ In this assignment, you will create a new blog application using Express.js, Mon
 
 - Create a new file called `authorController.js` in the controller's directory.
 - Open `controllers/authorController.js` and add the following functions (You should create one function at a time with a route to test):
-  - `getAllAuthors`
-  - `createAuthor`
-  - `getAuthorById`
-  - `updateAuthorById`
-  - `deleteAuthorById`
+  - `getAllAuthors`, this function should just return an array of all the authors in the database.
+  - `createAuthor`, this function should create one author.
+  - `getAuthorById`, this function should return one author that is found by id. If an author is not found, return a 400
+  - `updateAuthorById`, this function should update an author's information.
+  - `deleteAuthorById`, this function should delete an author.
 - Remember to export these functions out so they can be used!
 
 13. **Create Routes:**
@@ -126,7 +120,7 @@ In this assignment, you will create a new blog application using Express.js, Mon
   - `_id` (String): A unique identifier generated using UUID (Universally Unique Identifier) version 4.
   - `title` (String): The title of the blog post. It is a required field.
   - `content` (String): The content of the blog post. It is a required field.
-  - `author` (String): The author of the blog post refering to a user. It is a required field.
+  - `author` (String): The author of the blog post, use ref. It is a required field.
   - `lastModified` (Date): The date and time when the blog post was last modified. It has a default value of the current time.
   - `createdAt` (Date): The date and time when the blog post was created. It has a default value of the current time.
 
@@ -134,11 +128,11 @@ In this assignment, you will create a new blog application using Express.js, Mon
 
 - Create a new file called `blogController.js` in the controller's directory.
 - Open `controllers/blogController.js` and add the following functions:
-  - `getAllBlogs`
-  - `createBlog`
-  - `getBlogById`
-  - `updateBlogById`
-  - `deleteBlogById`
+  - `getAllBlogs`, this function should return all blogs and name of the author using populate
+  - `createBlog`, this function should create a new blog.
+  - `getBlogById`, this function returns one blog by id.
+  - `updateBlogById`, this function updates a blog by id.
+  - `deleteBlogById`, this function should delete one blog.
 - Remember to export these functions out so they can be used!
 
 16. **Create Routes:**
