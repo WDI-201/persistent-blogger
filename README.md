@@ -98,9 +98,9 @@ In this assignment, you will create a new blog application using Express.js, Mon
 - Open `controllers/authorController.js` and add the following functions (You should create one function at a time with a route to test):
   - `getAllAuthors`, this function should just return an array of all the authors in the database.
   - `createAuthor`, this function should create one author.
-  - `getAuthorById`, this function should return one author that is found by id. If an author is not found, return a 400
-  - `updateAuthorById`, this function should update an author's information.
-  - `deleteAuthorById`, this function should delete an author.
+  - `getAuthorById`, this function should return one author that is found by id. If an author is not found, return a 400 response with a message.
+  - `updateAuthorById`, this function should update an author's information.If an author is not found, return a 400 response with a message.
+  - `deleteAuthorById`, this function should delete an author.If an author is not found, return a 400 response with a message.
 - Remember to export these functions out so they can be used!
 
 13. **Create Routes:**
@@ -128,11 +128,11 @@ In this assignment, you will create a new blog application using Express.js, Mon
 
 - Create a new file called `blogController.js` in the controller's directory.
 - Open `controllers/blogController.js` and add the following functions:
-  - `getAllBlogs`, this function should return all blogs and name of the author using populate
+  - `getAllBlogs`, this function should return all blogs and the name of the author. Use the populate method.
   - `createBlog`, this function should create a new blog.
-  - `getBlogById`, this function returns one blog by id.
-  - `updateBlogById`, this function updates a blog by id.
-  - `deleteBlogById`, this function should delete one blog.
+  - `getBlogById`, this function returns one blog by id. If blog is not found, respond with a 400 and a message.
+  - `updateBlogById`, this function updates a blog by id. If blog is not found, respond with a 400 and a message.
+  - `deleteBlogById`, this function should delete one blog. If blog is not found, respond with a 400 and a message.
 - Remember to export these functions out so they can be used!
 
 16. **Create Routes:**
