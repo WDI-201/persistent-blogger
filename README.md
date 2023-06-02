@@ -30,7 +30,7 @@ In this assignment, you will create a new blog application using Express.js, Mon
      ```
      npm install --save-dev nodemon
      ```
-     Run the following command to install dotenv and uuid as dependencies:
+     Run the following command to install dotenv, uuid and mongoose as dependencies:
      ```
      npm install dotenv uuid mongoose
      ```
