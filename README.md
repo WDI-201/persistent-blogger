@@ -32,7 +32,7 @@ In this assignment, you will create a new blog application using Express.js, Mon
      ```
      Run the following command to install dotenv and uuid as dependencies:
      ```
-     npm install dotenv uuid
+     npm install dotenv uuid mongoose
      ```
 4. **Set up .env file**
 
