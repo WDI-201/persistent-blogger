@@ -1,6 +1,6 @@
 # Persistent Blogger
 
-In this assignment, you will create a new blog application using Express.js, Mongoose, and the Model-View-Controller (MVC) architecture. The application will allow users to create, read, update, and delete authors and blog posts.
+In this assignment, you will create a new blog application using Express.js, MongoDB, Mongoose, and the Model-View-Controller (MVC) architecture. The application will allow users to create, read, update, and delete authors and blog posts.
 
 ## Instructions
 
