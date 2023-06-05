@@ -92,26 +92,16 @@ In this assignment, you will create a new blog application using Express.js, Mon
   - `lastModified` (Date): The date and time when the blog post was last modified. It has a default value of the current time.
   - `createdAt` (Date): The date and time when the blog post was created. It has a default value of the current time.
 
-12. **Create a controller:**
+12. **Create Routes and Controllers:**
 
-- Create a new file called `blogController.js` in the controller's directory.
-- Open `controllers/blogController.js` and add the following functions (You should create one function at a time with a route to test):
-  - `getAllBlogs`, this function should return all blogs.
-  - `createBlog`, this function should create a new blog.
-  - `getBlogById`, this function returns one blog by id. If blog is not found, respond with a 400 and a message.
-  - `updateBlogById`, this function updates a blog by id. If blog is not found, respond with a 400 and a message.
-  - `deleteBlogById`, this function should delete one blog. If blog is not found, respond with a 400 and a message.
-- Remember to export these functions out so they can be used!
-
-13. **Create Routes:**
-
-- Open `routes/blogs.js` and add the following routes, connect the functions from controller. Remember to test each route with the corresponding functions:
-  - `/all-blogs`
-  - `/new-blog`
-  - `/get-blog-by-id`
-  - `/update-blog`
-  - `/delete-blog`
-- Remember to add needed params or queries!
+- Create a new file called `blogController.js` in the controller's directory. Remember to export these functions out!
+- In corresponding files, add the routes and controller based on functionalities. Make sure to test each route at a time with its functions before creating the next one!:
+  - `/all-blogs` route that uses `getAllBlogs` function from the controller, this function should return all blogs.
+  - `/new-blog` route that uses `createBlog` function from the controller, this function should create a new blog.
+  - `/get-blog-by-id` route that uses `getBlogById` function from the controller, this function returns one blog by id. If blog is not found, respond with a 400 and a message.
+  - `/update-blog` route that uses `updateBlogById` function from the controller, this function updates a blog by id. If blog is not found, respond with a 400 and a message.
+  - `/delete-blog` route that uses `deleteBlogById` function from the controller, this function should delete one blog. If blog is not found, respond with a 400 and a message.
+- Remember to add needed params or queries! 
 
 ## Testing the Application
 
@@ -128,7 +118,7 @@ To test your application, follow these steps:
 
 **Add an Author route and connect**
 
-- Create a route for author's and connect author to Blogs by using ref and populate.
+- Create a route for author's and connect Author to Blogs by using ref and populate.
 
 **Create a Author.js file inside the model directory**
 
@@ -140,23 +130,13 @@ To test your application, follow these steps:
   - `email` (String): The email of the author. A required field
   - `createdAt` (Date): The date and time when the author was created. It has a default value of the current time.
 
-**Create a controller:**
+**Create Routes and Controllers:**
 
-- Create a new file called `authorController.js` in the controller's directory.
-- Open `controllers/authorController.js` and add the following functions (You should create one function at a time with a route to test):
-  - `getAllAuthors`, this function should just return an array of all the authors in the database.
-  - `createAuthor`, this function should create one author.
-  - `getAuthorById`, this function should return one author that is found by id. If an author is not found, return a 400
-  - `updateAuthorById`, this function should update an author's information.
-  - `deleteAuthorById`, this function should delete an author.
-- Remember to export these functions out so they can be used!
-
-**Create Routes:**
-
-- Open `routes/authors.js` and add the following routes, connect the functions from controller. Remember to test each route with the corresponding functions:
-  - `/all-authors`
-  - `/new-author`
-  - `/get-author-by-id`
-  - `/update-author`
-  - `/delete-author`
+- Create a new file called `authorController.js` in the controller's directory. Remember to export these functions out!
+- In corresponding files, add the routes and controller based on functionalities. Make sure to test each route at a time with its functions before creating the next one!:
+  - `/all-authors` route that uses `getAllAuthors` function from the controller, this function should just return an array of all the authors in the database.
+  - `/new-author` route that uses `createAuthor` function from the controller, this function should create one author.
+  - `/get-author-by-id` route that uses `getAuthorById` function from the controller, this function should return one author that is found by id. If an author is not found, return a 400
+  - `/update-author` route that uses `updateAuthorById` function from the controller, this function should update an author's information.
+  - `/delete-author` route that uses `deleteAuthorById` function from the controller, this function should delete an author.
 - Remember to add needed params or queries!
